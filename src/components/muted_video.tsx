@@ -1,8 +1,9 @@
 interface MutedVideoProps {
   poster?: string;
-  src: string;
+  src?: string;
   style?: React.CSSProperties;
   className?: string;
+  sources?: JSX.Element;
 }
 
 export default function MutedVideo({
@@ -10,6 +11,7 @@ export default function MutedVideo({
   poster,
   style,
   className,
+  sources,
 }: MutedVideoProps) {
   return (
     <video
@@ -20,7 +22,7 @@ export default function MutedVideo({
       style={style}
       className={className}
     >
-      <source src={src} />
+      {sources ? sources : <source src={src} />}
     </video>
   );
 }

@@ -13,6 +13,8 @@ export default function BackToTop({ isTop }: { isTop: boolean }) {
         display: "flex",
         alignItems: "center",
         gap: "7px",
+        zIndex: 99,
+        cursor: "pointer",
       }}
       className="rotated"
       onClick={() => {

@@ -46,15 +46,29 @@ h1 {
   font-size: 3.5rem;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 /* container & container background*/
 .container {
   min-height: 100vh;
   position: relative;
 }
-.container > .content {
+.container.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 10;
+  font-size: xx-large;
+}
+
+.container section.content section {
   position: relative;
   z-index: 10;
 }
+
 .container > .background {
   position: absolute;
   object-fit: cover;
@@ -99,6 +113,10 @@ h1 {
   opacity: 0;
   transition: 300ms ease;
 }
+.link_list:active::after {
+  transition: 0;
+  background-color: #c64a18;
+}
 .link_list:hover::after {
   opacity: 1;
 }
@@ -132,7 +150,7 @@ h1 {
 }
 
 .x1 {
-  min-width: 100px;
+  min-width: 200px;
   height: auto;
   flex: 1;
   max-width: 40rem;
@@ -144,7 +162,7 @@ h1 {
   gap: 10px;
 }
 
-article > .content {
+article .content {
   font-size: 2rem;
   min-width: 400px;
   flex: 1;
