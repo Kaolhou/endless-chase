@@ -1,0 +1,164 @@
+/*fonts*/
+@font-face {
+  font-family: "SF Compact";
+  src: url(assets/fonts/SF-Compact-Display-Regular.otf);
+}
+@font-face {
+  font-family: "SF Compact";
+  src: url(assets/fonts/SF-Compact-Display-Bold.otf);
+  font-weight: bold;
+}
+
+/*REM sizes*/
+@media screen and (max-width: 1560px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 2500px) {
+  body {
+    font-size: 23px;
+  }
+}
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020617;
+  color: #f1f5f9;
+  font-family: "SF Compact";
+
+  --purple: #7f26f4;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+/* container & container background*/
+.container {
+  min-height: 100vh;
+  position: relative;
+}
+.container > .content {
+  position: relative;
+  z-index: 10;
+}
+.container > .background {
+  position: absolute;
+  object-fit: cover;
+  height: 100vh;
+  z-index: 0;
+  margin: 0;
+}
+
+/*font sizes*/
+.f_larger {
+  font-size: 2.5rem;
+}
+
+.f_large {
+  font-size: 2rem;
+}
+.f_small {
+  font-size: 1.2rem;
+}
+.f_smaller {
+  font-size: 1rem;
+}
+.f_medium {
+  font-size: 1.5rem;
+}
+
+/* link list */
+.link_list {
+  list-style: none;
+  color: #fafafa;
+  width: fit-content;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.link_list::after {
+  background-color: var(--purple);
+  width: 100%;
+  height: 0.1rem;
+  content: "";
+  display: block;
+  opacity: 0;
+  transition: 300ms ease;
+}
+.link_list:hover::after {
+  opacity: 1;
+}
+.link_list > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*rotate*/
+.rotated {
+  transform: rotate(-90deg);
+  display: block;
+  margin-top: 2rem;
+}
+
+/*pulse*/
+.pulse {
+  filter: drop-shadow(0px 0px 7px #c64a18);
+  animation: pulsate 3s ease-out infinite;
+}
+@keyframes pulsate {
+  0% {
+    filter: drop-shadow(0px 0px 0.15rem #c64a18);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 0.5rem #c64a18);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 0.15rem #c64a18);
+  }
+}
+
+.x1 {
+  min-width: 100px;
+  height: auto;
+  flex: 1;
+  max-width: 40rem;
+}
+
+.media > .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+article > .content {
+  font-size: 2rem;
+  min-width: 400px;
+  flex: 1;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+/* .container > .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+} */
