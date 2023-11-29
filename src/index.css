@@ -159,7 +159,7 @@ p {
   min-width: 200px;
   height: auto;
   flex: 1;
-  max-width: 40rem;
+  max-width: 50rem;
 }
 
 @media screen and (min-width: 720px) {

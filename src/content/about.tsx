@@ -1,4 +1,5 @@
 import { JSX } from "react";
+import poster from "../assets/maxresdefault.png";
 // import teste2 from "../assets/placeholder/ab67616d0000b273b1f8da74f225fa1225cdface.jpg";
 
 export default function About({
@@ -39,20 +40,20 @@ export default function About({
           </div>
 
           <img
-            src="https://i.ytimg.com/vi/7WDQBKaPVeg/maxresdefault.jpg"
-            alt=""
+            src={poster}
+            alt="poster"
             className="x1"
             onClick={() =>
               open(
                 <iframe
+                  src="https://www.youtube.com/embed/CT8hUR_Bm8A?si=rcQv6g8JZSGqpxQN"
+                  title="YouTube video player"
                   style={{
                     aspectRatio: "16/9",
                     flex: 1,
                     maxWidth: "50vw",
                     border: "0px",
                   }}
-                  src="https://www.youtube.com/embed/7WDQBKaPVeg?si=S23qfe784wDrAXVY"
-                  title="YouTube video player"
                   allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
