@@ -1,12 +1,12 @@
-import { useState } from "react";
-import teste from "../assets/placeholder/AM.jpeg";
-import MainModal from "../components/modal";
+import { JSX } from "react";
 // import teste2 from "../assets/placeholder/ab67616d0000b273b1f8da74f225fa1225cdface.jpg";
 
-export default function About() {
-  const [isOpen, setIsOpen] = useState(false);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
+export default function About({
+  open,
+}: {
+  open: (content: JSX.Element) => void;
+  close: () => void;
+}) {
   return (
     <section
       style={{
@@ -37,17 +37,31 @@ export default function About() {
               narrative integrated into the game's Lore.
             </p>
           </div>
+
           <img
-            src={teste}
+            src="https://i.ytimg.com/vi/7WDQBKaPVeg/maxresdefault.jpg"
             alt=""
             className="x1"
-            onClick={open}
+            onClick={() =>
+              open(
+                <iframe
+                  style={{
+                    aspectRatio: "16/9",
+                    flex: 1,
+                    maxWidth: "50vw",
+                    border: "0px",
+                  }}
+                  src="https://www.youtube.com/embed/7WDQBKaPVeg?si=S23qfe784wDrAXVY"
+                  title="YouTube video player"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              )
+            }
             style={{ cursor: "pointer" }}
           />
         </div>
       </article>
-
-      <MainModal isOpen={isOpen} close={close} />
     </section>
   );
 }

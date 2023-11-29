@@ -9,12 +9,22 @@ import logo from "../assets/logo jogo-min.png";
 import About from "../content/about";
 import Footer from "../components/footer";
 import BackToTop from "../components/back_to_top";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import GlitchedButton from "../components/glitched_button";
+import Features from "../content/features";
+import Media from "../content/media";
+import MainModal from "../components/modal";
 
 export default function Main() {
   const [isTop, setIsTop] = useState(true);
   const [scrollTop, setScrollTop] = useState(0);
+  const [isOpenContent, setIsOpenContent] = useState<{
+    content: JSX.Element;
+    isOpen: boolean;
+  }>({ content: <></>, isOpen: false });
+  const open = (content: JSX.Element) =>
+    setIsOpenContent({ content, isOpen: true });
+  const close = () => setIsOpenContent((prev) => ({ ...prev, isOpen: false }));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +65,12 @@ export default function Main() {
                 alternative="Endless"
                 url="#about"
               />
-              <GlitchedButton title="Press Kit" alternative="Chase" />
+              <GlitchedButton
+                title="Press Kit"
+                alternative="Chase"
+                url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
+                target="_blank"
+              />
             </div>
           </section>
         }
@@ -74,8 +89,19 @@ export default function Main() {
           />
         }
       />
-      <Container content={<About />} id="about" center />
+      <Container
+        content={<About open={open} close={close} />}
+        id="about"
+        center
+      />
+      <Container content={<Features />} id="features" />
+      <Container content={<Media open={open} />} id="media" />
       <Footer />
+      <MainModal
+        isOpen={isOpenContent.isOpen}
+        content={isOpenContent.content}
+        close={close}
+      />
     </main>
   );
 }

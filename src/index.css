@@ -45,6 +45,12 @@ body {
 h1 {
   font-size: 3.5rem;
 }
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 2rem;
+}
 
 .modal-open {
   overflow: hidden;
@@ -64,7 +70,7 @@ h1 {
   font-size: xx-large;
 }
 
-.container section.content section {
+.container div.content section {
   position: relative;
   z-index: 10;
 }
@@ -156,9 +162,38 @@ h1 {
   max-width: 40rem;
 }
 
+@media screen and (min-width: 720px) {
+  .media > .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .media > .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid span {
+  aspect-ratio: 1/1;
+  background-color: #c64a18;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  cursor: pointer;
+  filter: brightness(0.8);
+  transition: 0.3s;
+}
+.grid span:hover {
+  filter: brightness(01);
+}
+
+.grid span .grid span img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .media > .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 

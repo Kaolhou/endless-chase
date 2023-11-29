@@ -19,12 +19,9 @@ export default function Container({
     return (
       <div className={"container "} onClick={onClick} id={id}>
         {background}
-        <section
-          className={`content ${center ? "center" : ""}`}
-          onClick={onClick}
-        >
+        <div className={`content ${center ? "center" : ""}`} onClick={onClick}>
           {content}
-        </section>
+        </div>
       </div>
     );
   return (

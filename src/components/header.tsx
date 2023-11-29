@@ -49,8 +49,8 @@ export default function Header({ isTop }: { isTop: boolean }) {
         <nav>
           <ul style={{ display: "flex", gap: 10, margin: 0, padding: 0 }}>
             <LinkList content="About" className="f_medium" url="#about" />
-            <LinkList content="Teste" className="f_medium" />
-            <LinkList content="Teste" className="f_medium" />
+            <LinkList content="Features" className="f_medium" url="#features" />
+            <LinkList content="Media" className="f_medium" url="#media" />
           </ul>
         </nav>
       </div>
