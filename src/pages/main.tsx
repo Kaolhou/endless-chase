@@ -50,7 +50,11 @@ export default function Main() {
               <img src={logo} alt="" style={{ width: "100%" }} />
             </div>
             <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
-              <GlitchedButton title="Watch Trailer" alternative="Endless" />
+              <GlitchedButton
+                title="Watch Trailer"
+                alternative="Endless"
+                url="#about"
+              />
               <GlitchedButton title="Press Kit" alternative="Chase" />
             </div>
           </section>
