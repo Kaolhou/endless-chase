@@ -1,11 +1,11 @@
 /*fonts*/
 @font-face {
   font-family: "SF Compact";
-  src: url(assets/fonts/SF-Compact-Display-Regular.otf);
+  src: url(assets/fonts/SF-Compact-Display-Regular.woff2);
 }
 @font-face {
   font-family: "SF Compact";
-  src: url(assets/fonts/SF-Compact-Display-Bold.otf);
+  src: url(assets/fonts/SF-Compact-Display-Bold.woff2);
   font-weight: bold;
 }
 
