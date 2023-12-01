@@ -1,4 +1,4 @@
-import logo from "../assets/icons/algo-ai-brush-removebg-4pn9dlk.png";
+import logo from "../assets/icons/algo-ai-brush-removebg-4pn9dlk_resized.webp";
 import LinkList from "./link_list";
 
 export default function Header({ isTop }: { isTop: boolean }) {
