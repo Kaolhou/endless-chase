@@ -19,7 +19,7 @@ export default function LinkList({
   onClick,
   target,
 }: LinkListProps) {
-  if (url)
+  if (url && !isSpan)
     return (
       <li
         className={`link_list ${bold ? "bold" : ""}  ${className ?? ""} `}
