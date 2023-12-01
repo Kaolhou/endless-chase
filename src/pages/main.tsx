@@ -1,7 +1,7 @@
 import Container from "../components/container";
 import Header from "../components/header";
 import MutedVideo from "../components/muted_video";
-import mp4_2k from "../assets/Loop_resized_2k.mp4";
+// import mp4_2k from "../assets/Loop_resized_2k.mp4";
 import mp4_1080p from "../assets/Loop_resized_1080p.mp4";
 import mp4_720p from "../assets/Loop_resized_720p.mp4";
 import poster from "../assets/poster.jpeg";
@@ -53,7 +53,7 @@ export default function Main() {
             className="background"
             sources={
               <>
-                <source media="(min-width: 2560px)" src={mp4_2k} />
+                {/* <source media="(min-width: 2560px)" src={mp4_2k} /> */}
                 <source media="(min-width: 1080px)" src={mp4_1080p} />
                 <source src={mp4_720p} />
               </>
