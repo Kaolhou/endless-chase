@@ -1,6 +1,5 @@
 import { JSX } from "react";
 import poster from "../assets/maxresdefault.png";
-// import teste2 from "../assets/placeholder/ab67616d0000b273b1f8da74f225fa1225cdface.jpg";
 
 export default function About({
   open,
@@ -53,6 +52,9 @@ export default function About({
                     flex: 1,
                     maxWidth: "50vw",
                     border: "0px",
+                    width: "100%",
+                    boxSizing: "border-box",
+                    minWidth: "200px",
                   }}
                   allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

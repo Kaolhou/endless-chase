@@ -1,14 +1,48 @@
 import explore from "../assets/prints/Explore os Mundos.png";
+import LeftArticle from "../components/left_article";
 import conquer from "../assets/prints/Conquiste Poderes.png";
 import demonstrate from "../assets/prints/Demonstre sua flexibilidade.png";
 import travel from "../assets/prints/Viagem no tempo.png";
+
+import RightArticle from "../components/right_article";
 
 export default function Features() {
   return (
     <section style={{ maxWidth: "70vw", margin: "auto" }}>
       <h1>Features</h1>
       <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
-        <article
+        <RightArticle
+          ps={[
+            "Interact with locals, collect unique items, and discover secrets beyond your imagination.",
+          ]}
+          title="Explore the Worlds"
+          src={explore}
+        />
+        <LeftArticle
+          title="Conquer Powers"
+          src={conquer}
+          ps={[
+            "Obtain powerful runes that contain ancient knowledge, complete your quests, and gain new powers to win your battles.",
+          ]}
+        />
+        <RightArticle
+          ps={[
+            "Be skillful and prove you can win in 5 different genres:",
+            "Stealth, Action and Adventure, Hack n Slash, Survivor Horror and Bullet Hell",
+          ]}
+          title="Demonstrate your flexibility"
+          src={demonstrate}
+        />
+        <LeftArticle
+          title="Travel through time and space"
+          src={travel}
+          ps={[
+            "Make the right choices and travel the worlds to evolve your character",
+            "Discover the story behind the mysteries of Time.",
+          ]}
+        />
+
+        {/* <article
           style={{
             display: "flex",
             alignItems: "center",
@@ -101,7 +135,7 @@ export default function Features() {
             alt="Travel through time and space"
             style={{ maxWidth: "50rem", width: "100%", borderRadius: 10 }}
           />
-        </article>
+        </article> */}
       </div>
     </section>
   );

@@ -6,6 +6,8 @@ interface ContainerProps {
   onClick?: (...any: any[]) => any;
   id?: string;
   center?: boolean;
+  style?: React.CSSProperties;
+  contentStyle?: React.CSSProperties;
 }
 
 export default function Container({
@@ -14,18 +16,28 @@ export default function Container({
   onClick,
   id,
   center = false,
+  style,
+  contentStyle,
 }: ContainerProps) {
   if (background)
     return (
-      <div className={"container "} onClick={onClick} id={id}>
+      <div className={"container "} onClick={onClick} id={id} style={style}>
         {background}
-        <div className={`content ${center ? "center" : ""}`} onClick={onClick}>
+        <div
+          className={`content ${center ? "center" : ""}`}
+          onClick={onClick}
+          style={contentStyle}
+        >
           {content}
         </div>
       </div>
     );
   return (
-    <div className={`container ${center ? "center" : ""}`} id={id}>
+    <div
+      className={`container ${center ? "center" : ""}`}
+      id={id}
+      style={style}
+    >
       {content}
     </div>
   );

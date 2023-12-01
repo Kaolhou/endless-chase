@@ -38,6 +38,7 @@ body {
   background-color: #020617;
   color: #f1f5f9;
   font-family: "SF Compact";
+  overflow-x: hidden !important;
 
   --purple: #7f26f4;
 }
@@ -58,6 +59,7 @@ p {
 
 /* container & container background*/
 .container {
+  margin: 5rem 0;
   min-height: 100vh;
   position: relative;
 }
@@ -163,11 +165,19 @@ p {
 }
 
 @media screen and (min-width: 720px) {
+  header div {
+    margin: 0 2rem !important;
+    padding: 1rem !important;
+  }
+
   .media > .grid {
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
   }
 }
-
+header > div {
+  margin: 0 1rem 0 0;
+  padding: 0 1rem 0 0;
+}
 @media screen and (min-width: 450px) {
   .media > .grid {
     grid-template-columns: 1fr 1fr;
@@ -197,9 +207,72 @@ p {
   gap: 10px;
 }
 
+article.right_features + article.left_features {
+  margin: 5em 0;
+}
+
+article.right_features {
+  padding-left: 20rem;
+  position: relative;
+}
+article.left_features {
+  padding-right: 20rem;
+  position: relative;
+}
+
+article.right_features > img {
+  position: relative;
+}
+article.right_features > div > p,
+article.left_features > div > p {
+  margin: 5px;
+}
+article.right_features > div {
+  width: 30rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #1f2937;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: #00000091 10px 10px 20px;
+}
+article.left_features > div {
+  width: 30rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  background-color: #1f2937;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: #00000091 10px 10px 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  article.right_features {
+    margin-left: 0;
+  }
+  article.left_features {
+    margin: 0 !important;
+  }
+}
+
 article .content {
   font-size: 2rem;
-  min-width: 400px;
+  min-width: 200px;
   flex: 1;
 }
 

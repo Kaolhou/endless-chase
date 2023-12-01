@@ -33,9 +33,7 @@ export default function Header({ isTop }: { isTop: boolean }) {
           display: "flex",
           width: "100%",
           justifyContent: "space-between",
-          margin: "0 4rem",
           alignItems: "center",
-          padding: "1rem",
         }}
       >
         <img

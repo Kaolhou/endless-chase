@@ -29,12 +29,17 @@ export default function MainModal({ isOpen, close, content }: MainModalProps) {
           display: "flex",
           boxSizing: "border-box",
           padding: 20,
-          backgroundColor: "#9ca3af",
+          backgroundColor: "#1e293b",
           border: 0,
+          flex: 1,
+          top: "3rem",
+          left: "3rem",
+          right: "3rem",
+          bottom: "3rem",
         },
         overlay: {
           zIndex: 100,
-          backgroundColor: "#ffffff77",
+          backgroundColor: "#64748b77",
         },
       }}
     >
@@ -50,7 +55,7 @@ export default function MainModal({ isOpen, close, content }: MainModalProps) {
             onClick={close}
             style={{ backgroundColor: "rgba(0,0,0,0)", border: 0 }}
           >
-            <IoMdClose style={{ cursor: "pointer" }} size={30} />
+            <IoMdClose style={{ cursor: "pointer" }} size={40} />
           </button>
         </div>
         <div
