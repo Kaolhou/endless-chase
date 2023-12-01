@@ -2,11 +2,13 @@
 @font-face {
   font-family: "SF Compact";
   src: url(assets/fonts/SF-Compact-Display-Regular.woff2);
+  font-display: swap;
 }
 @font-face {
   font-family: "SF Compact";
   src: url(assets/fonts/SF-Compact-Display-Bold.woff2);
   font-weight: bold;
+  font-display: swap;
 }
 
 /*REM sizes*/
@@ -37,7 +39,7 @@ body {
   padding: 0;
   background-color: #020617;
   color: #f1f5f9;
-  font-family: "SF Compact";
+  font-family: "SF Compact", sans-serif;
   overflow-x: hidden !important;
 
   --purple: #7f26f4;
