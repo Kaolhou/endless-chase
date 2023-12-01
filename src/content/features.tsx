@@ -1,8 +1,8 @@
-import explore from "../assets/prints/Explore os Mundos.png";
+import explore from "../assets/prints/Explore os Mundos.webp";
 import LeftArticle from "../components/left_article";
-import conquer from "../assets/prints/Conquiste Poderes.png";
-import demonstrate from "../assets/prints/Demonstre sua flexibilidade.png";
-import travel from "../assets/prints/Viagem no tempo.png";
+import conquer from "../assets/prints/Conquiste Poderes.webp";
+import demonstrate from "../assets/prints/Demonstre sua flexibilidade.webp";
+import travel from "../assets/prints/Viagem no tempo.webp";
 
 import RightArticle from "../components/right_article";
 
