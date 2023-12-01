@@ -1,5 +1,5 @@
 import GlitchedButton from "../components/glitched_button";
-import logo from "../assets/logo jogo-min.png";
+import logo from "../assets/icons/logo jogo-min.png";
 
 interface MainProps {
   scrollTop: number;

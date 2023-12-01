@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import poster from "../assets/maxresdefault.png";
+import poster from "../assets/maxresdefault.webp";
 
 export default function About({
   open,
