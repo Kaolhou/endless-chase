@@ -42,6 +42,7 @@ export default function About({
             src={poster}
             alt="poster"
             className="x1"
+            loading="lazy"
             onClick={() =>
               open(
                 <iframe

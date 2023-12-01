@@ -15,6 +15,7 @@ export default function LeftArticle({ ps, title, src }: LeftArticleProps) {
       <img
         src={src}
         alt={title}
+        loading="lazy"
         style={{
           maxWidth: "100%",
           borderRadius: 10,

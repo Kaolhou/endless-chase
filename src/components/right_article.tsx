@@ -25,6 +25,7 @@ export default function RightArticle({ ps, title, src }: RightArticleProps) {
       <img
         src={src}
         alt={title}
+        loading="lazy"
         style={{
           maxWidth: "100%",
 
