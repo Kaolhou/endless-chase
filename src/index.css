@@ -222,14 +222,24 @@ article.left_features {
   position: relative;
 }
 
-article.right_features > img {
+/* article.right_features > img {
   position: relative;
+} */
+article.right_features .blur,
+article.left_features .blur {
+  aspect-ratio: 16/9;
+  position: relative !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
-article.right_features > div > p,
-article.left_features > div > p {
+
+article.right_features > div.content > p,
+article.left_features > div.content > p {
   margin: 5px;
 }
-article.right_features > div {
+article.right_features > div.content {
   width: 30rem;
   padding: 20px;
   display: flex;
@@ -245,7 +255,7 @@ article.right_features > div {
   z-index: 10;
   box-shadow: #00000091 10px 10px 20px;
 }
-article.left_features > div {
+article.left_features > div.content {
   width: 30rem;
   padding: 20px;
   display: flex;

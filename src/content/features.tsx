@@ -12,6 +12,7 @@ export default function Features() {
       <h1>Features</h1>
       <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
         <RightArticle
+          hash="L7Cim:-@O@Bf^nVa_2Ew4VIAD%E2"
           ps={[
             "Interact with locals, collect unique items, and discover secrets beyond your imagination.",
           ]}
@@ -19,6 +20,7 @@ export default function Features() {
           src={explore}
         />
         <LeftArticle
+          hash="LEDRg3{x5;10PnNZn+Vtm+T0R*#+"
           title="Conquer Powers"
           src={conquer}
           ps={[
@@ -26,6 +28,7 @@ export default function Features() {
           ]}
         />
         <RightArticle
+          hash="L17Tqboet7X9]h9t0fNx009t0zNG"
           ps={[
             "Be skillful and prove you can win in 5 different genres:",
             "Stealth, Action and Adventure, Hack n Slash, Survivor Horror and Bullet Hell",
@@ -34,6 +37,7 @@ export default function Features() {
           src={demonstrate}
         />
         <LeftArticle
+          hash="LH6[w2yEMcMd*0yDeTR5yDx^kWRP"
           title="Travel through time and space"
           src={travel}
           ps={[
