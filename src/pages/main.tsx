@@ -4,7 +4,7 @@ import MutedVideo from "../components/muted_video";
 // import mp4_2k from "../assets/Loop_resized_2k.mp4";
 import mp4_1080p from "../assets/Loop_resized_1080p.mp4";
 import mp4_720p from "../assets/Loop_resized_720p.mp4";
-import poster from "../assets/poster.jpeg";
+import poster from "../assets/poster.webp";
 import About from "../content/about";
 import Footer from "../components/footer";
 import BackToTop from "../components/back_to_top";
