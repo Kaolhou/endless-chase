@@ -66,9 +66,6 @@ export default function Media({
             }
           />
         ))}
-        {/* <span>2</span>
-        <span>3</span>
-        <span>4</span> */}
       </div>
     </section>
   );
