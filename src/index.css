@@ -203,26 +203,35 @@ section.media > div.grid > .img_card > img {
   height: 100%;
   aspect-ratio: 16/9;
 }
-/* .grid span .grid span img {
-  object-fit: cover;
-  height: 100%;
+.tooltip.top {
+  bottom: 3rem;
+}
+.tooltip.top {
+  bottom: 3rem;
+}
+.tooltip.bottom {
+  top: 3rem;
+}
+
+.tooltip {
   display: none;
-} */
-
-/* section.media > div.grid > .blur {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  font-size: 1.5rem;
+  background-color: #1f2937;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  left: 40%;
 }
-section.media > div.grid > .img_card > img {
-  width: 100%;
-}
-section.media > div.grid > .img_card {
-  display: flex;
+.copy-to-clipboard-text-container {
+  list-style: none;
   position: relative;
-  justify-content: center;
-} */
+  cursor: pointer;
+}
 
+.copy-to-clipboard-text-container:hover .tooltip {
+  display: block;
+  position: absolute;
+}
 .media > .grid {
   display: grid;
   gap: 10px;

@@ -7,4 +7,5 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
+  assetsInclude: ["src/assets/media/**/**.webp"],
 });

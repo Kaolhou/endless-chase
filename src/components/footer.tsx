@@ -1,3 +1,4 @@
+import CopyToClipboard from "./copy_to_clipboard";
 import LinkList from "./link_list";
 
 export default function Footer() {
@@ -63,30 +64,31 @@ export default function Footer() {
           </ul>
         </article>
         <article>
-          <h2>Teste</h2>
+          <h2>Follow us</h2>
           <ul>
             <LinkList
-              content="Teste"
+              content="Linkedin"
+              url="https://www.linkedin.com/company/voxels-entertainment-and-games-ltda/?viewAsMember=true"
               className="f_medium"
               style={{ lineHeight: "3rem" }}
               target="_blank"
             />
             <LinkList
-              content="Teste"
+              content="YouTube"
+              target="_blank"
+              url="https://www.youtube.com/@voxelsentertainmentandgame9389"
               className="f_medium"
               style={{ lineHeight: "3rem" }}
-              target="_blank"
             />
           </ul>
         </article>
         <article>
-          <h2>teste</h2>
+          <h2>Who we are</h2>
           <ul>
-            <LinkList
-              content="Teste"
-              className="f_medium"
-              style={{ lineHeight: "3rem" }}
-              target="_blank"
+            <CopyToClipboard
+              isLi={true}
+              isSpan={true}
+              text="contact@voxels3dstudio.page"
             />
           </ul>
         </article>

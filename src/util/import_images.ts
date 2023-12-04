@@ -1,8 +1,4 @@
 import { ImgCardProps } from "../content/media";
-// import sm_1 from "../assets/media/webp_small/01.webp";
-// import bg_1 from "../assets/media/webp_big/01.webp";
-
-// const promises: [Promise<string[]>, Promise<string[]>] = [Promise.resolve([]), Promise.resolve([])];
 
 async function loadImagePaths(
   basePath: string,
@@ -17,8 +13,8 @@ async function loadImagePaths(
   return Promise.all(promises);
 }
 
-const smallImagesPromise = loadImagePaths("../assets/media/webp_small", 21);
-const bigImagesPromise = loadImagePaths("../assets/media/webp_big", 21);
+const smallImagesPromise = loadImagePaths("/media/webp_small", 21);
+const bigImagesPromise = loadImagePaths("/media/webp_big", 21);
 
 const images = await Promise.all([smallImagesPromise, bigImagesPromise]);
 const hashes = [
