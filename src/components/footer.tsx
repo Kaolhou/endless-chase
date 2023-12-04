@@ -1,6 +1,15 @@
 import LinkList from "./link_list";
 
 export default function Footer() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(anchor.getAttribute("href")!)!.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
   return (
     <footer
       style={{
@@ -25,19 +34,31 @@ export default function Footer() {
         }}
       >
         <article>
-          <h2>Teste</h2>
+          <h2>Navigation</h2>
           <ul>
             <LinkList
-              content="Teste"
+              content="Home"
               className="f_medium"
               style={{ lineHeight: "3rem" }}
-              target="_blank"
+              url="#home"
             />
             <LinkList
-              content="Teste"
+              content="About"
               className="f_medium"
               style={{ lineHeight: "3rem" }}
-              target="_blank"
+              url="#about"
+            />
+            <LinkList
+              content="Features"
+              className="f_medium"
+              style={{ lineHeight: "3rem" }}
+              url="#features"
+            />
+            <LinkList
+              content="Media"
+              className="f_medium"
+              style={{ lineHeight: "3rem" }}
+              url="#media"
             />
           </ul>
         </article>
@@ -77,8 +98,8 @@ export default function Footer() {
             isSpan
             content="Voxels Entertainment"
             style={{ display: "inline-block" }}
-            url="https://voxelsentertainment.com/"
             target="_blank"
+            onClick={() => window.open("https://voxelsentertainment.com/")}
           />
         </span>
       </section>

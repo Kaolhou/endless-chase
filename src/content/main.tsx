@@ -16,6 +16,7 @@ export default function Main({ scrollTop }: MainProps) {
         flexDirection: "column",
         opacity: 1 - scrollTop / window.innerHeight,
       }}
+      id="home"
     >
       <div style={{ width: "100%" }}>
         <img src={logo} alt="logo" style={{ width: "100%" }} />

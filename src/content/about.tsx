@@ -43,6 +43,7 @@ export default function About({
             alt="poster"
             className="x1"
             loading="lazy"
+            tabIndex={0}
             onClick={() =>
               open(
                 <iframe
