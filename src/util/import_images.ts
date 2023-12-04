@@ -5,10 +5,9 @@ async function loadImagePaths(
   count: number
 ): Promise<string[]> {
   const padNumber = (num: number) => (num < 10 ? `0${num}` : `${num}`);
-  const promises = Array.from({ length: count }, (_, i) =>
-    import(`${basePath}/${padNumber(i + 1)}.webp`).then(
-      (module) => module.default as string
-    )
+  const promises = Array.from(
+    { length: count },
+    (_, i) => `${basePath}/${padNumber(i + 1)}.webp`
   );
   return Promise.all(promises);
 }
