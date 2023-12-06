@@ -12,7 +12,7 @@ export default function Main({ scrollTop }: MainProps) {
         display: "flex",
         maxWidth: "40rem",
         height: "90vh",
-        justifyContent: "center",
+        justifyContent: "space-between",
         flexDirection: "column",
         opacity: 1 - scrollTop / window.innerHeight,
       }}
