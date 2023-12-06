@@ -24,12 +24,6 @@ export default function LeftArticle({
   }, [src]);
   return (
     <article className="left_features">
-      <div className="content">
-        <h2>{title}</h2>
-        {ps.map((i, k) => (
-          <p key={k}>{i}</p>
-        ))}
-      </div>
       {isLoaded ? (
         <img
           src={src}
@@ -57,6 +51,12 @@ export default function LeftArticle({
           }}
         />
       )}
+      <div className="content">
+        <h2>{title}</h2>
+        {ps.map((i, k) => (
+          <p key={k}>{i}</p>
+        ))}
+      </div>
     </article>
   );
 }

@@ -280,6 +280,9 @@ article.left_features > div.content > p {
 }
 article.right_features > div.content {
   width: 25rem;
+  aspect-ratio: 755 / 494;
+  background-image: url(/src/assets/overlay.png);
+  background-size: cover;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -288,7 +291,7 @@ article.right_features > div.content {
   top: 50%;
   transform: translate(-90%, -20%);
   text-align: center;
-  background-color: #1f2937;
+  /* background-color: #1f2937; */
   position: absolute;
   border-radius: 20px;
   z-index: 10;
@@ -297,6 +300,9 @@ article.right_features > div.content {
 article.left_features > div.content {
   width: 25rem;
   padding: 20px;
+  aspect-ratio: 755 / 494;
+  background-image: url(/src/assets/overlay.png);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,7 +311,6 @@ article.left_features > div.content {
   right: 0;
   transform: translateY(-20%);
   text-align: center;
-  background-color: #1f2937;
   position: absolute;
   border-radius: 20px;
   z-index: 10;
@@ -315,7 +320,7 @@ article.left_features > div.content {
 @media screen and (max-width: 1100px) {
   article.left_features,
   article.right_features {
-    margin: 10rem 0 !important;
+    margin: 1rem 0 !important;
     background-color: #1f2937;
     border-radius: 20px;
     overflow: hidden;
@@ -331,33 +336,8 @@ article.left_features > div.content {
   article.left_features {
     padding-right: 0 !important;
   }
-  /* article.right_features > div.content {
-    transform: translate(40%, 30%);
-  } */
-  article.left_features > div.content {
-    /* bottom: 0 !important;
-    width: 80vw;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    left: 50%;
-    height: fit-content;
-    display: none; */
-    display: block;
-    position: relative;
-    transform: none !important;
-    width: 100%;
-    padding: 0;
-    background: none;
-    box-shadow: none;
-  }
+  article.left_features > div.content,
   article.right_features > div.content {
-    /* bottom: 0 !important;
-    width: 80vw;
-    transform: translate(-50%, 50%);
-
-    left: 50%;
-    height: fit-content;
-    display: none; */
     display: block;
     position: relative;
     transform: none !important;
@@ -365,6 +345,7 @@ article.left_features > div.content {
     padding: 0;
     background: none;
     box-shadow: none;
+    padding: 2px;
   }
 }
 
