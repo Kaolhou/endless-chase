@@ -18,6 +18,7 @@ export default function Features() {
           ]}
           title="Explore the Worlds"
           src={explore}
+          // card_style={{ transform: "translate(-80%,00%)" }}
         />
         <LeftArticle
           hash="LEDRg3{x5;10PnNZn+Vtm+T0R*#+"
@@ -30,11 +31,11 @@ export default function Features() {
         <RightArticle
           hash="L17Tqboet7X9]h9t0fNx009t0zNG"
           ps={[
-            "Be skillful and prove you can win in 5 different genres:",
-            "Stealth, Action and Adventure, Hack n Slash, Survivor Horror and Bullet Hell",
+            "Be skillful and prove you can win in 5 different genres: Stealth, Action and Adventure, Hack n Slash, Survivor Horror and Bullet Hell",
           ]}
           title="Demonstrate your flexibility"
           src={demonstrate}
+          card_style={{ transform: "translate(-90%,-30%)" }}
         />
         <LeftArticle
           hash="LH6[w2yEMcMd*0yDeTR5yDx^kWRP"

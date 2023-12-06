@@ -39,6 +39,7 @@ export default function Main() {
   });
   return (
     <main>
+      <div className="parallax"></div>
       <Header isTop={isTop} />
       <BackToTop isTop={isTop} />
 

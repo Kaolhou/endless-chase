@@ -33,14 +33,25 @@
     font-size: 30px;
   }
 }
+.parallax {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -5;
+  background-image: url(/src/assets/bg-glitch-min.gif);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #020617;
   color: #f1f5f9;
   font-family: "SF Compact", sans-serif;
   overflow-x: hidden !important;
+  background-color: #020617;
 
   --purple: #7f26f4;
 }
@@ -268,14 +279,14 @@ article.left_features > div.content > p {
   margin: 5px;
 }
 article.right_features > div.content {
-  width: 30rem;
+  width: 25rem;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-90%, -20%);
   text-align: center;
   background-color: #1f2937;
   position: absolute;
@@ -284,7 +295,7 @@ article.right_features > div.content {
   box-shadow: #00000091 10px 10px 20px;
 }
 article.left_features > div.content {
-  width: 30rem;
+  width: 25rem;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -292,7 +303,7 @@ article.left_features > div.content {
   align-items: center;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   text-align: center;
   background-color: #1f2937;
   position: absolute;
@@ -305,6 +316,14 @@ article.left_features > div.content {
   article.left_features,
   article.right_features {
     margin: 10rem 0 !important;
+    background-color: #1f2937;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  article.right_features img,
+  article.left_features img {
+    border-radius: 0 !important;
+    margin-bottom: -3px;
   }
   article.right_features {
     padding: 0 !important;
@@ -316,21 +335,36 @@ article.left_features > div.content {
     transform: translate(40%, 30%);
   } */
   article.left_features > div.content {
-    bottom: 0 !important;
+    /* bottom: 0 !important;
     width: 80vw;
     transform: translateY(-50%);
     transform: translateX(-50%);
     left: 50%;
     height: fit-content;
+    display: none; */
+    display: block;
+    position: relative;
+    transform: none !important;
+    width: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
   }
   article.right_features > div.content {
-    bottom: 0 !important;
+    /* bottom: 0 !important;
     width: 80vw;
     transform: translate(-50%, 50%);
-    /* transform: translateY(-50%);
-    transform: translateX(); */
+
     left: 50%;
     height: fit-content;
+    display: none; */
+    display: block;
+    position: relative;
+    transform: none !important;
+    width: 100%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
   }
 }
 

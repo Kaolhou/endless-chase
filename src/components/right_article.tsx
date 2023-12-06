@@ -6,12 +6,14 @@ interface RightArticleProps {
   ps: string[];
   src: string;
   hash: string;
+  card_style?: React.CSSProperties;
 }
 export default function RightArticle({
   ps,
   title,
   src,
   hash,
+  card_style,
 }: RightArticleProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -23,25 +25,9 @@ export default function RightArticle({
     };
     img.src = src;
   }, [src]);
-
+  console.log(card_style);
   return (
-    <article
-      className="right_features"
-      // style={{
-      //   display: "flex",
-      //   alignItems: "center",
-      //   gap: 20,
-      //   flexWrap: "wrap",
-      //   justifyContent: "center",
-      //   flexDirection: "row",
-      // }}
-    >
-      <div className="content">
-        <h2>{title}</h2>
-        {ps.map((i, k) => (
-          <p key={k}>{i}</p>
-        ))}
-      </div>
+    <article className="right_features">
       {isLoaded ? (
         <img
           src={src}
@@ -68,6 +54,12 @@ export default function RightArticle({
           }}
         />
       )}
+      <div className="content" style={card_style}>
+        <h2>{title}</h2>
+        {ps.map((i, k) => (
+          <p key={k}>{i}</p>
+        ))}
+      </div>
     </article>
   );
 }
