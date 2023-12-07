@@ -80,6 +80,13 @@ export default function Footer() {
               className="f_medium"
               style={{ lineHeight: "3rem" }}
             />
+            <LinkList
+              content="Press Kit"
+              target="_blank"
+              url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
+              className="f_medium"
+              style={{ lineHeight: "3rem" }}
+            />
           </ul>
         </article>
         <article>

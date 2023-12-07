@@ -1,7 +1,6 @@
 import Container from "../components/container";
 import Header from "../components/header";
 import MutedVideo from "../components/muted_video";
-// import mp4_2k from "../assets/Loop_resized_2k.mp4";
 import mp4_1080p from "../assets/LOOP 2 - Compressed with FlexClip (online-video-cutter.com)_108p.mp4";
 import mp4_720p from "../assets/LOOP 2 - Compressed with FlexClip (online-video-cutter.com).mp4";
 import poster from "../assets/poster2.jpeg.webp";
@@ -25,6 +24,8 @@ export default function Main() {
     setIsOpenContent({ content, isOpen: true });
   const close = () => setIsOpenContent((prev) => ({ ...prev, isOpen: false }));
 
+  const steamPage = "";
+
   useEffect(() => {
     const handleScroll = () => {
       setIsTop(window.scrollY < 10);
@@ -45,7 +46,7 @@ export default function Main() {
 
       <Container
         style={{ margin: "0" }}
-        content={<MainContent scrollTop={scrollTop} />}
+        content={<MainContent steamPage={steamPage} scrollTop={scrollTop} />}
         id="main"
         background={
           <MutedVideo

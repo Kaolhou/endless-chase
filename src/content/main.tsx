@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 
 interface MainProps {
   scrollTop: number;
+  steamPage: string;
 }
-export default function Main({ scrollTop }: MainProps) {
+export default function Main({ scrollTop, steamPage }: MainProps) {
   const [dimensions, setDimensions] = useState<{
     width: number;
     height: number;
@@ -50,12 +51,21 @@ export default function Main({ scrollTop }: MainProps) {
           alternative="Endless"
           url="#about"
         />
-        <GlitchedButton
-          title="Press Kit"
-          alternative="Chase"
-          url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
-          target="_blank"
-        />
+        {steamPage ? (
+          <GlitchedButton
+            title="Wishlist Now"
+            alternative="Chase"
+            url={steamPage}
+            target="_blank"
+          />
+        ) : (
+          <GlitchedButton
+            title="Press Kit"
+            alternative="Chase"
+            url="https://impress.games/press-kit/voxels-entertainment/endless-chase"
+            target="_blank"
+          />
+        )}
       </div>
     </section>
   );
