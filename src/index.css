@@ -38,11 +38,12 @@
   height: 100vh;
   position: fixed;
   z-index: -5;
-  background-image: url(/src/assets/bg-glitch-min.gif);
+  background-image: url(/src/assets/black_wall-wallpaper-1600x900.jpg);
+  filter: saturate(1);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 body {
