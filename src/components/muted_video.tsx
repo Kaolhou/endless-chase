@@ -1,5 +1,6 @@
 interface MutedVideoProps {
   poster?: string;
+  posterMobile?: string;
   src?: string;
   style?: React.CSSProperties;
   className?: string;
@@ -12,10 +13,11 @@ export default function MutedVideo({
   style,
   className,
   sources,
+  posterMobile,
 }: MutedVideoProps) {
   return (
     <video
-      poster={poster}
+      poster={window.innerWidth > 520 ? poster : posterMobile ?? poster}
       muted
       autoPlay
       loop

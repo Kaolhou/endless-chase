@@ -16,6 +16,7 @@ import SocialMedia from "../components/social_media";
 import { language } from "../util/language";
 import { useStateStorage } from "../util/useStateStorage";
 import mp4_mobile from "../assets/Unreal.mp4";
+import poster_mobile from "../assets/poster_mobile.jpeg";
 
 export default function Main() {
   const [isTop, setIsTop] = useState(true);
@@ -63,6 +64,7 @@ export default function Main() {
         background={
           <MutedVideo
             poster={poster}
+            posterMobile={poster_mobile}
             style={{ width: "100%" }}
             className="background"
             sources={
