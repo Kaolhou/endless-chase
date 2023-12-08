@@ -25,7 +25,7 @@ export default function RightArticle({
     };
     img.src = src;
   }, [src]);
-  console.log(card_style);
+  // console.log(card_style);
   return (
     <article className="right_features">
       {isLoaded ? (

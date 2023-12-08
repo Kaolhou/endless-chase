@@ -1,5 +1,5 @@
 import GlitchedButton from "../components/glitched_button";
-import logo from "../assets/icons/image.webp";
+import logo from "../assets/icons/logo jogo.webp";
 import { useEffect, useState } from "react";
 import { language } from "../util/language";
 import pt from "../locale/pt.json";
