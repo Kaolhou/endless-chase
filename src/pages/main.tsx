@@ -15,6 +15,7 @@ import MainContent from "../content/main";
 import SocialMedia from "../components/social_media";
 import { language } from "../util/language";
 import { useStateStorage } from "../util/useStateStorage";
+import mp4_mobile from "../assets/Unreal.mp4";
 
 export default function Main() {
   const [isTop, setIsTop] = useState(true);
@@ -40,7 +41,7 @@ export default function Main() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
   const [lang, setLang] = useStateStorage<language>("lang", "en");
   return (
     <main>
@@ -66,9 +67,9 @@ export default function Main() {
             className="background"
             sources={
               <>
-                {/* <source media="(min-width: 2560px)" src={mp4_2k} /> */}
                 <source media="(min-width: 1080px)" src={mp4_1080p} />
-                <source src={mp4_720p} />
+                <source media="(min-width: 520px)" src={mp4_720p} />
+                <source src={mp4_mobile} />
               </>
             }
           />

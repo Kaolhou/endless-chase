@@ -19,7 +19,7 @@ export default function SocialMedia({
         position: "fixed",
         zIndex: 999,
         top: "40%",
-        left: isTop ? -999 : 20,
+        left: isTop ? -200 : 20,
         transition: ".3s",
         display: "flex",
         flexDirection: "column",
