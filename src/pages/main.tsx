@@ -69,9 +69,17 @@ export default function Main() {
             className="background"
             sources={
               <>
-                <source media="(min-width: 1080px)" src={mp4_1080p} />
-                <source media="(min-width: 520px)" src={mp4_720p} />
-                <source src={mp4_mobile} />
+                <source
+                  media="(min-width: 1080px)"
+                  src={mp4_1080p}
+                  type="video/mp4"
+                />
+                <source
+                  media="(min-width: 520px)"
+                  src={mp4_720p}
+                  type="video/mp4"
+                />
+                <source src={mp4_mobile} type="video/mp4" />
               </>
             }
           />

@@ -21,10 +21,11 @@ export default function MutedVideo({
       muted
       autoPlay
       loop
+      playsInline
       style={style}
       className={className}
     >
-      {sources ? sources : <source src={src} />}
+      {sources ? sources : <source src={src} type="video/mp4" />}
     </video>
   );
 }
