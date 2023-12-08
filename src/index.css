@@ -281,7 +281,7 @@ article.left_features > div.content > p {
 }
 article.right_features > div.content {
   width: 25rem;
-  aspect-ratio: 755 / 494;
+  /* aspect-ratio: 755 / 494; */
   background-image: url(/src/assets/overlay.png);
   background-size: cover;
   padding: 3.3rem;
@@ -301,7 +301,7 @@ article.right_features > div.content {
 article.left_features > div.content {
   width: 25rem;
   padding: 3.3rem;
-  aspect-ratio: 755 / 494;
+  /* aspect-ratio: 755 / 494; */
   background-image: url(/src/assets/overlay.png);
   background-size: cover;
   display: flex;

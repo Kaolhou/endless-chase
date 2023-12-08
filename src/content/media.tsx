@@ -2,6 +2,9 @@
 import useLoadImage from "../components/useLoadImage";
 import { Blurhash } from "react-blurhash";
 import import_images from "../util/import_images";
+import pt from "../locale/pt.json";
+import en from "../locale/en.json";
+import { language } from "../util/language";
 
 export interface ImgCardProps {
   src: string;
@@ -37,12 +40,14 @@ function ImgCard({ alt, onClick, card, hash }: ImgCardProps) {
 
 export default function Media({
   open,
+  lang,
 }: {
   open: (content: JSX.Element) => void;
+  lang: language;
 }) {
   return (
     <section className="media" style={{ maxWidth: "70vw", margin: "auto" }}>
-      <h1>Media</h1>
+      <h1>{lang == "pt" ? pt["media"] : en["media"]}</h1>
       <div className="grid">
         {import_images.map((i, key) => (
           <ImgCard

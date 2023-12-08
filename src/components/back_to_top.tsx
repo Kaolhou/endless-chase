@@ -1,5 +1,15 @@
 import { BiArrowToRight } from "react-icons/bi";
-export default function BackToTop({ isTop }: { isTop: boolean }) {
+import pt from "../locale/pt.json";
+import en from "../locale/en.json";
+import { language } from "../util/language";
+
+export default function BackToTop({
+  isTop,
+  lang,
+}: {
+  isTop: boolean;
+  lang: language;
+}) {
   return (
     <button
       style={{
@@ -24,7 +34,9 @@ export default function BackToTop({ isTop }: { isTop: boolean }) {
         });
       }}
     >
-      <span style={{ fontSize: "2rem" }}>Scroll to top</span>
+      <span style={{ fontSize: "2rem" }}>
+        {lang == "pt" ? pt["scroll"] : en["scroll"]}
+      </span>
       <BiArrowToRight size={"2rem"} color={"#fff"} />
     </button>
   );

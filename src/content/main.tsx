@@ -1,12 +1,16 @@
 import GlitchedButton from "../components/glitched_button";
 import logo from "../assets/icons/image.webp";
 import { useEffect, useState } from "react";
+import { language } from "../util/language";
+import pt from "../locale/pt.json";
+import en from "../locale/en.json";
 
 interface MainProps {
   scrollTop: number;
   steamPage: string;
+  lang: language;
 }
-export default function Main({ scrollTop, steamPage }: MainProps) {
+export default function Main({ scrollTop, steamPage, lang }: MainProps) {
   const [dimensions, setDimensions] = useState<{
     width: number;
     height: number;
@@ -47,13 +51,13 @@ export default function Main({ scrollTop, steamPage }: MainProps) {
       </div>
       <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
         <GlitchedButton
-          title="Watch Trailer"
+          title={lang == "pt" ? pt["watch_trailer"] : en["watch_trailer"]}
           alternative="Endless"
           url="#about"
         />
         {steamPage ? (
           <GlitchedButton
-            title="Wishlist Now"
+            title={lang == "pt" ? pt["wishlist"] : en["wishlist"]}
             alternative="Chase"
             url={steamPage}
             target="_blank"

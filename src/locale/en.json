@@ -1,0 +1,35 @@
+{
+  "header.about": "About",
+  "header.features": "Features",
+  "header.media": "Media",
+  "watch_trailer": "Watch Trailer",
+  "home": "Home",
+  "wishlist": "Wishlist Now",
+
+  "scroll": "Scroll to top",
+
+  "about": "About Endless Chase",
+  "about.content": "Endless Chase is a Sci-fi punk with time travel in Real Time RPG bringing a differentiated gameplay experience using 5 core loops strategically distributed in the 4 acts of the Kishotenketsu narrative integrated into the game's Lore.",
+
+  "features": "Features",
+
+  "features.explore": "Explore the Worlds",
+  "features.explore.content": "Interact with locals, collect unique items, and discover secrets beyond your imagination.",
+
+  "features.conquer": "Conquer Powers",
+  "features.conquer.content": "Obtain powerful runes that contain ancient knowledge, complete your quests, and gain new powers to win your battles.",
+
+  "features.demonstrate": "Demonstrate your flexibility",
+  "features.demonstrate.content": "Be skillful and prove you can win in 5 different genres: Stealth, Action and Adventure, Hack n Slash, Survivor Horror and Bullet Hell.",
+
+  "features.travel": "Travel through time and space",
+  "features.travel.content1": "Make the right choices and travel the worlds to evolve your character",
+  "features.travel.content2": "Discover the story behind the mysteries of Time.",
+
+  "media": "Media",
+
+  "footer.copy": "All rights reserved. Copyright",
+  "footer.nav": "Navigation",
+  "footer.follow": "Follow us",
+  "us": "Who we are"
+}

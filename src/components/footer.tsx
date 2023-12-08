@@ -1,7 +1,10 @@
+import { language } from "../util/language";
 import CopyToClipboard from "./copy_to_clipboard";
 import LinkList from "./link_list";
+import pt from "../locale/pt.json";
+import en from "../locale/en.json";
 
-export default function Footer() {
+export default function Footer({ lang }: { lang: language }) {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -35,28 +38,30 @@ export default function Footer() {
         }}
       >
         <article>
-          <h2>Navigation</h2>
+          <h2>{lang == "pt" ? pt["footer.nav"] : en["footer.nav"]}</h2>
           <ul>
             <LinkList
-              content="Home"
+              content={lang == "pt" ? pt["home"] : en["home"]}
               className="f_medium"
               style={{ lineHeight: "3rem" }}
               url="#home"
             />
             <LinkList
-              content="About"
+              content={lang == "pt" ? pt["header.about"] : en["header.about"]}
               className="f_medium"
               style={{ lineHeight: "3rem" }}
               url="#about"
             />
             <LinkList
-              content="Features"
+              content={
+                lang == "pt" ? pt["header.features"] : en["header.features"]
+              }
               className="f_medium"
               style={{ lineHeight: "3rem" }}
               url="#features"
             />
             <LinkList
-              content="Media"
+              content={lang == "pt" ? pt["header.media"] : en["header.media"]}
               className="f_medium"
               style={{ lineHeight: "3rem" }}
               url="#media"
@@ -64,7 +69,7 @@ export default function Footer() {
           </ul>
         </article>
         <article>
-          <h2>Follow us</h2>
+          <h2>{lang == "pt" ? pt["footer.follow"] : en["footer.follow"]}</h2>
           <ul>
             <LinkList
               content="Linkedin"
@@ -90,7 +95,7 @@ export default function Footer() {
           </ul>
         </article>
         <article>
-          <h2>Who we are</h2>
+          <h2>{lang == "pt" ? pt["us"] : en["us"]}</h2>
           <ul>
             <CopyToClipboard
               isLi={true}
@@ -102,7 +107,9 @@ export default function Footer() {
       </section>
       <section style={{ textAlign: "center" }}>
         <span>
-          <span>All rights reserved. Copyright&copy; </span>
+          <span>
+            {lang == "pt" ? pt["footer.copy"] : en["footer.copy"]}&copy;{" "}
+          </span>
           <LinkList
             isSpan
             content="Voxels Entertainment"

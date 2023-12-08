@@ -1,11 +1,16 @@
 import { JSX } from "react";
 import poster from "../assets/maxresdefault.webp";
+import { language } from "../util/language";
+import pt from "../locale/pt.json";
+import en from "../locale/en.json";
 
 export default function About({
   open,
+  lang,
 }: {
   open: (content: JSX.Element) => void;
   close: () => void;
+  lang: language;
 }) {
   return (
     <section
@@ -18,7 +23,7 @@ export default function About({
       }}
     >
       <article>
-        <h1>About Endless Chase</h1>
+        <h1>{lang == "pt" ? pt["about"] : en["about"]}</h1>
         <div
           style={{
             display: "flex",
@@ -30,12 +35,7 @@ export default function About({
           }}
         >
           <div className="content">
-            <p>
-              Endless Chase is a Sci-fi punk with time travel in Real Time RPG
-              bringing a differentiated gameplay experience using 5 core loops
-              strategically distributed in the 4 acts of the Kishotenketsu
-              narrative integrated into the game's Lore.
-            </p>
+            <p>{lang == "pt" ? pt["about.content"] : en["about.content"]}</p>
           </div>
 
           <img

@@ -12,6 +12,9 @@ import Features from "../content/features";
 import Media from "../content/media";
 import MainModal from "../components/modal";
 import MainContent from "../content/main";
+import SocialMedia from "../components/social_media";
+import { language } from "../util/language";
+import { useStateStorage } from "../util/useStateStorage";
 
 export default function Main() {
   const [isTop, setIsTop] = useState(true);
@@ -38,15 +41,23 @@ export default function Main() {
       window.removeEventListener("scroll", handleScroll);
     };
   });
+  const [lang, setLang] = useStateStorage<language>("lang", "en");
   return (
     <main>
       <div className="parallax"></div>
-      <Header isTop={isTop} />
-      <BackToTop isTop={isTop} />
+      <Header isTop={isTop} lang={lang} />
+      <BackToTop lang={lang} isTop={isTop} />
+      <SocialMedia setLang={setLang} isTop={isTop} steamPage={steamPage} />
 
       <Container
         style={{ margin: "0" }}
-        content={<MainContent steamPage={steamPage} scrollTop={scrollTop} />}
+        content={
+          <MainContent
+            lang={lang}
+            steamPage={steamPage}
+            scrollTop={scrollTop}
+          />
+        }
         id="main"
         background={
           <MutedVideo
@@ -64,21 +75,21 @@ export default function Main() {
         }
       />
       <Container
-        content={<About open={open} close={close} />}
+        content={<About open={open} lang={lang} close={close} />}
         id="about"
         center
       />
       <Container
-        content={<Features />}
+        content={<Features lang={lang} />}
         style={{ padding: "7rem 0" }}
         id="features"
       />
       <Container
-        content={<Media open={open} />}
+        content={<Media lang={lang} open={open} />}
         id="media"
         style={{ padding: "7rem 0" }}
       />
-      <Footer />
+      <Footer lang={lang} />
       <MainModal
         isOpen={isOpenContent.isOpen}
         content={isOpenContent.content}
