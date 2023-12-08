@@ -224,7 +224,9 @@ section.media > div.grid > .img_card > img {
 .tooltip.bottom {
   top: 3rem;
 }
-
+video::-webkit-media-controls {
+  display: none !important;
+}
 .tooltip {
   display: none;
   font-size: 1.5rem;
